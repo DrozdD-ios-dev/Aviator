@@ -10,7 +10,7 @@ import UIKit
 final class BaseTabBarItem: UITabBarItem {
     convenience init(title: String, image: UIImage) {
         self.init(title: title, image: image, selectedImage: nil)
-        self.imageInsets = UIEdgeInsets(top: 14, left: 6, bottom: 8, right: 6)
+        self.imageInsets = UIEdgeInsets(top: 16, left: 10, bottom: 10, right: 10)
     }
 }
 

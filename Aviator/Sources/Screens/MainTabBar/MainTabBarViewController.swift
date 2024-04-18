@@ -26,7 +26,7 @@ class MainTabBarViewController: UITabBarController {
         createCustomLine()
     }
     
-    func createTabBarItems() {
+    private func createTabBarItems() {
         let itemOne: BaseTabBarItem = {
             let item = BaseTabBarItem(title: "Maintenance", image: UIImage(named: "1") ?? UIImage._1)
             return item
@@ -61,24 +61,13 @@ class MainTabBarViewController: UITabBarController {
         viewControllers = [maintenanceViewController, monitoringViewController, flightViewController, analyticsViewController, settingsViewController]
     }
     
-    func setupAppearance() {
-        let appearance = UITabBarAppearance()
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
-        
-        appearance.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
-        
-        appearance.stackedLayoutAppearance.normal.iconColor = .gray
-        appearance.stackedLayoutAppearance.selected.iconColor = .white
-        
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+    private func setupAppearance() {
+        let appearance = CustomAppearance.settingsAppearance()
         tabBar.standardAppearance = appearance
         tabBar.backgroundColor = UIColor(named: "Gray43")
     }
     
-    func createCustomLine() {
+    private func createCustomLine() {
         let topLine = CALayer()
         topLine.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 2.5)
         topLine.backgroundColor = UIColor(named: "Red239")?.cgColor
@@ -86,4 +75,3 @@ class MainTabBarViewController: UITabBarController {
     }
     
 }
-

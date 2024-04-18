@@ -25,7 +25,15 @@ final class MaintenanceViewController: BaseController {
         return view
     }()
     
-    private let createAirplanStack: UIStackView = {
+    private let mainMaintenanceLable: UILabel = {
+        let lable = UILabel()
+        lable.text = "Maintenance"
+        lable.font = UIFont(name: "SFProText-Medium", size: 34)
+        lable.textColor = .white
+        return lable
+    }()
+    
+    private let aircraftMaintenanceStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
@@ -33,13 +41,13 @@ final class MaintenanceViewController: BaseController {
         return stack
     }()
     
-    private let createAirplanImage: UIImageView = {
+    private let aircraftMaintenanceImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "airPlan")
         return image
     }()
     
-    private let createAircraftLable: UILabel = {
+    private let aircraftMaintenanceLable: UILabel = {
         let lable = UILabel()
         lable.text = "Aircraft"
         lable.font = UIFont(name: "SFProText-Medium", size: 23)
@@ -47,7 +55,7 @@ final class MaintenanceViewController: BaseController {
         return lable
     }()
     
-    private let createAircraftLableDesc: UILabel = {
+    private let aircraftMaintenanceLableDesc: UILabel = {
         let lable = UILabel()
         lable.text = "Add your aircraft for maintenance"
         lable.font = UIFont(name: EnumString.SFMed.rawValue, size: 17)
@@ -55,7 +63,7 @@ final class MaintenanceViewController: BaseController {
         return lable
     }()
     
-    private lazy var createAircraftButton: BaseButton = {
+    private lazy var aircraftMaintenanceButton: BaseButton = {
         let button = BaseButton(text: "Create aircraft")
         button.addAction(UIAction {_ in self.createAircraftButtonTapped()}, for: .touchUpInside)
         return button
@@ -79,7 +87,6 @@ final class MaintenanceViewController: BaseController {
         view.backgroundColor = UIColor(named: "Gray43")
         addSubviews()
         makeConstraints()
-        // сделать большой стак, в него поместить самолетный стак, и понасоздавать кучю вьюх, попробовать, будет ли скролиться или нет!
     }
 }
 
@@ -88,7 +95,8 @@ final class MaintenanceViewController: BaseController {
 private extension MaintenanceViewController {
     
     func createAircraftButtonTapped() {
-        print(111)
+        let vc = ExtraSettingsMaintenanceAssembly.build()
+        navigationController?.present(vc, animated: true)
     }
 }
 
@@ -106,11 +114,12 @@ private extension MaintenanceViewController {
     
     func addSubviews() {
         view.addSubview(navigationBarView)
-        view.addSubview(createAirplanStack)
-        createAirplanStack.addArrangedSubview(createAirplanImage)
-        createAirplanStack.addArrangedSubview(createAircraftLable)
-        createAirplanStack.addArrangedSubview(createAircraftLableDesc)
-        view.addSubview(createAircraftButton)
+        navigationBarView.addSubview(mainMaintenanceLable)
+        view.addSubview(aircraftMaintenanceStack)
+        aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceImage)
+        aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceLable)
+        aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceLableDesc)
+        view.addSubview(aircraftMaintenanceButton)
     }
     
     func makeConstraints() {
@@ -121,11 +130,16 @@ private extension MaintenanceViewController {
             make.width.equalTo(view.frame.width * 2)
         }
         
-        createAirplanStack.snp.makeConstraints { make in
+        mainMaintenanceLable.snp.makeConstraints { make in
+            make.centerX.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalToSuperview().inset(16)
+        }
+        
+        aircraftMaintenanceStack.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
         
-        createAircraftButton.snp.makeConstraints { make in
+        aircraftMaintenanceButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(50)

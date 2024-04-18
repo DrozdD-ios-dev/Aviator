@@ -10,6 +10,7 @@ import UIKit
 final class BaseButton: UIButton {
     convenience init(text: String) {
         self.init(type: .system)
+        initEvent()
         backgroundColor = UIColor(named: "Red239")
         layer.cornerRadius = 24
   
@@ -21,6 +22,24 @@ final class BaseButton: UIButton {
         addSubview(label)
         label.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+    }
+    
+    private func initEvent() {
+        addTarget(self, action: #selector(buttonPressed), for: .touchDown)
+        addTarget(self, action: #selector(buttonReleased), for: .touchUpInside)
+        addTarget(self, action: #selector(buttonReleased), for: .touchUpOutside)
+    }
+    
+    @objc private func buttonPressed() {
+        UIView.animate(withDuration: 0.1) {
+            self.alpha = 0.7
+        }
+    }
+    
+    @objc private func buttonReleased() {
+        UIView.animate(withDuration: 0.1) {
+            self.alpha = 1.0
         }
     }
 }

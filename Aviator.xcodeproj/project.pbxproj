@@ -35,6 +35,13 @@
 		8ADF9F0E2BD05A6E00B72ECC /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF9F0D2BD05A6D00B72ECC /* SFProText-Medium.ttf */; };
 		8ADF9F102BD05D3A00B72ECC /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F0F2BD05D3A00B72ECC /* BaseButton.swift */; };
 		8ADF9F122BD05D9B00B72ECC /* EnumForStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */; };
+		8ADF9F142BD109A400B72ECC /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F132BD109A400B72ECC /* SettingsButton.swift */; };
+		8ADF9F162BD1278D00B72ECC /* CustomAppereance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F152BD1278D00B72ECC /* CustomAppereance.swift */; };
+		8ADF9F192BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F182BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift */; };
+		8ADF9F1B2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F1A2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift */; };
+		8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F1C2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift */; };
+		8ADF9F1F2BD13E4600B72ECC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */; };
+		8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +73,13 @@
 		8ADF9F0D2BD05A6D00B72ECC /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
 		8ADF9F0F2BD05D3A00B72ECC /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForStrings.swift; sourceTree = "<group>"; };
+		8ADF9F132BD109A400B72ECC /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		8ADF9F152BD1278D00B72ECC /* CustomAppereance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppereance.swift; sourceTree = "<group>"; };
+		8ADF9F182BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSettingsMaintenanceViewController.swift; sourceTree = "<group>"; };
+		8ADF9F1A2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSettingsMaintenancePresenter.swift; sourceTree = "<group>"; };
+		8ADF9F1C2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSettingsMaintenanceAssembly.swift; sourceTree = "<group>"; };
+		8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDataAircraft.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +184,12 @@
 			isa = PBXGroup;
 			children = (
 				8ADF9EE92BD01A0600B72ECC /* BaseTabBarItem.swift */,
+				8ADF9F152BD1278D00B72ECC /* CustomAppereance.swift */,
 				8ADF9F0F2BD05D3A00B72ECC /* BaseButton.swift */,
+				8ADF9F132BD109A400B72ECC /* SettingsButton.swift */,
 				8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */,
+				8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */,
+				8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +200,7 @@
 				8ADF9EDF2BCFCF4D00B72ECC /* MaintenanceViewController.swift */,
 				8ADF9EE12BCFD1B700B72ECC /* MaintenancePresenter.swift */,
 				8ADF9EE32BCFD1CE00B72ECC /* MaintenanceAssembly.swift */,
+				8ADF9F172BD12CE700B72ECC /* ExtraSettings */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -249,6 +268,16 @@
 				8ADF9F0B2BD05A2F00B72ECC /* SFProText-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8ADF9F172BD12CE700B72ECC /* ExtraSettings */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF9F182BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift */,
+				8ADF9F1A2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift */,
+				8ADF9F1C2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift */,
+			);
+			path = ExtraSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADF9F1F2BD13E4600B72ECC /* CustomTextField.swift in Sources */,
 				8ADF9EF02BD0225600B72ECC /* MonitoringPresenter.swift in Sources */,
 				8ADF9EFE2BD022BE00B72ECC /* AnalyticsAssembly.swift in Sources */,
 				8ADF9F042BD022ED00B72ECC /* SettingsAssembly.swift in Sources */,
@@ -338,19 +368,25 @@
 				8ADF9EFC2BD022B200B72ECC /* AnalyticsPresenter.swift in Sources */,
 				8ADF9EF42BD0227500B72ECC /* FlightViewController.swift in Sources */,
 				8ADF9EBF2BCFC8B600B72ECC /* MainTabBarViewController.swift in Sources */,
+				8ADF9F162BD1278D00B72ECC /* CustomAppereance.swift in Sources */,
 				8ADF9EF62BD0228200B72ECC /* FlightPresenter.swift in Sources */,
 				8ADF9F022BD022DF00B72ECC /* SettingsPresenter.swift in Sources */,
 				8ADF9F102BD05D3A00B72ECC /* BaseButton.swift in Sources */,
 				8ADF9EF82BD0228E00B72ECC /* FlightAssembly.swift in Sources */,
+				8ADF9F142BD109A400B72ECC /* SettingsButton.swift in Sources */,
 				8ADF9EE82BCFD89C00B72ECC /* BaseController.swift in Sources */,
 				8ADF9F122BD05D9B00B72ECC /* EnumForStrings.swift in Sources */,
+				8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */,
 				8ADF9EE22BCFD1B700B72ECC /* MaintenancePresenter.swift in Sources */,
 				8ADF9EE42BCFD1CE00B72ECC /* MaintenanceAssembly.swift in Sources */,
 				8ADF9EEA2BD01A0600B72ECC /* BaseTabBarItem.swift in Sources */,
 				8ADF9EF22BD0226200B72ECC /* MonitoringAssembly.swift in Sources */,
+				8ADF9F1B2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift in Sources */,
 				8ADF9EBB2BCFC8B600B72ECC /* AppDelegate.swift in Sources */,
 				8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */,
 				8ADF9EEE2BD0215000B72ECC /* MonitoringViewController.swift in Sources */,
+				8ADF9F192BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift in Sources */,
+				8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */,
 				8ADF9F002BD022D300B72ECC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
