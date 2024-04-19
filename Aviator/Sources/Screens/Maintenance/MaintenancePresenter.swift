@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - Protocol
 
 protocol MaintenanceInput {
-    func printOne()
+    var maintenanceDataBase: [AircraftDataModel] { get }
+    func setupBackgroundImage()
+    func updateData()
 }
 
 final class MaintenancePresenter: MaintenanceInput {
@@ -19,11 +22,22 @@ final class MaintenancePresenter: MaintenanceInput {
     
     weak var viewController: MaintenanceOutput?
     
-    // MARK: - Init
+    private let realm = try! Realm()
+    private var itemsAircraftModel: Results<AircraftDataModel>!
+    var maintenanceDataBase: [AircraftDataModel] = []
     
     // MARK: - Public function
     
-    func printOne() {
-        print("One")
+    func updateData() {
+        itemsAircraftModel = realm.objects(AircraftDataModel.self)
+        maintenanceDataBase = Array(itemsAircraftModel)
+    }
+    
+    func setupBackgroundImage() {
+        if maintenanceDataBase.count == 0 {
+            viewController?.setupBackgroundImage(parametr: false)
+        } else {
+            viewController?.setupBackgroundImage(parametr: true)
+        }
     }
 }

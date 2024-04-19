@@ -42,6 +42,11 @@
 		8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F1C2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift */; };
 		8ADF9F1F2BD13E4600B72ECC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */; };
 		8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */; };
+		8ADF9F242BD24D8000B72ECC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9F232BD24D8000B72ECC /* Realm */; };
+		8ADF9F262BD24D8000B72ECC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9F252BD24D8000B72ECC /* RealmSwift */; };
+		8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */; };
+		8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */; };
+		8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +85,9 @@
 		8ADF9F1C2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSettingsMaintenanceAssembly.swift; sourceTree = "<group>"; };
 		8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDataAircraft.swift; sourceTree = "<group>"; };
+		8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInspectionTextField.swift; sourceTree = "<group>"; };
+		8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftDataModel.swift; sourceTree = "<group>"; };
+		8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADF9F262BD24D8000B72ECC /* RealmSwift in Frameworks */,
+				8ADF9F242BD24D8000B72ECC /* Realm in Frameworks */,
 				8ADF9ED32BCFCD9B00B72ECC /* SnapKit in Frameworks */,
 				8ADF9ED52BCFCD9B00B72ECC /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -190,6 +200,8 @@
 				8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */,
 				8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */,
 				8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */,
+				8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */,
+				8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +213,7 @@
 				8ADF9EE12BCFD1B700B72ECC /* MaintenancePresenter.swift */,
 				8ADF9EE32BCFD1CE00B72ECC /* MaintenanceAssembly.swift */,
 				8ADF9F172BD12CE700B72ECC /* ExtraSettings */,
+				8ADF9F2B2BD288E400B72ECC /* Cell */,
 			);
 			path = Maintenance;
 			sourceTree = "<group>";
@@ -280,6 +293,14 @@
 			path = ExtraSettings;
 			sourceTree = "<group>";
 		};
+		8ADF9F2B2BD288E400B72ECC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +320,8 @@
 			packageProductDependencies = (
 				8ADF9ED22BCFCD9B00B72ECC /* SnapKit */,
 				8ADF9ED42BCFCD9B00B72ECC /* SnapKit-Dynamic */,
+				8ADF9F232BD24D8000B72ECC /* Realm */,
+				8ADF9F252BD24D8000B72ECC /* RealmSwift */,
 			);
 			productName = Aviator;
 			productReference = 8ADF9EB72BCFC8B600B72ECC /* Aviator.app */;
@@ -330,6 +353,7 @@
 			mainGroup = 8ADF9EAE2BCFC8B600B72ECC;
 			packageReferences = (
 				8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8ADF9F222BD24D8000B72ECC /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 8ADF9EB82BCFC8B600B72ECC /* Products */;
 			projectDirPath = "";
@@ -364,6 +388,7 @@
 				8ADF9EFE2BD022BE00B72ECC /* AnalyticsAssembly.swift in Sources */,
 				8ADF9F042BD022ED00B72ECC /* SettingsAssembly.swift in Sources */,
 				8ADF9EE02BCFCF4D00B72ECC /* MaintenanceViewController.swift in Sources */,
+				8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */,
 				8ADF9EFA2BD022A600B72ECC /* AnalyticsViewController.swift in Sources */,
 				8ADF9EFC2BD022B200B72ECC /* AnalyticsPresenter.swift in Sources */,
 				8ADF9EF42BD0227500B72ECC /* FlightViewController.swift in Sources */,
@@ -377,6 +402,7 @@
 				8ADF9EE82BCFD89C00B72ECC /* BaseController.swift in Sources */,
 				8ADF9F122BD05D9B00B72ECC /* EnumForStrings.swift in Sources */,
 				8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */,
+				8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */,
 				8ADF9EE22BCFD1B700B72ECC /* MaintenancePresenter.swift in Sources */,
 				8ADF9EE42BCFD1CE00B72ECC /* MaintenanceAssembly.swift in Sources */,
 				8ADF9EEA2BD01A0600B72ECC /* BaseTabBarItem.swift in Sources */,
@@ -386,6 +412,7 @@
 				8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */,
 				8ADF9EEE2BD0215000B72ECC /* MonitoringViewController.swift in Sources */,
 				8ADF9F192BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift in Sources */,
+				8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */,
 				8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */,
 				8ADF9F002BD022D300B72ECC /* SettingsViewController.swift in Sources */,
 			);
@@ -457,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -514,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -534,10 +561,12 @@
 				DEVELOPMENT_TEAM = 7ZUXBDDRV9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Aviator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aviator;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,10 +590,12 @@
 				DEVELOPMENT_TEAM = 7ZUXBDDRV9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Aviator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aviator;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,6 +641,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		8ADF9F222BD24D8000B72ECC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift?tab=readme-ov-file";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -622,6 +661,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		8ADF9F232BD24D8000B72ECC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ADF9F222BD24D8000B72ECC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		8ADF9F252BD24D8000B72ECC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ADF9F222BD24D8000B72ECC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

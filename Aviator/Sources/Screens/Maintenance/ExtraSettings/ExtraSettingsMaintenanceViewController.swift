@@ -76,30 +76,15 @@ final class ExtraSettingsMaintenanceViewController: BaseController {
         return datePicker
     }()
     
-    private lazy var lastDataTextField: UITextField = {
-        let textField = UITextField()
+    private lazy var lastDataTextField: DateInspectionTextField = {
+        let textField = DateInspectionTextField(text: "Select last date")
         textField.text = "Select last date"
-        textField.textColor = .white
-        textField.tintColor = .white
-        textField.font = UIFont(name: EnumString.SFMed.rawValue, size: 13)
-        textField.layer.cornerRadius = 15
-        textField.layer.borderColor = UIColor(named: "Red239")?.cgColor
-        textField.layer.borderWidth = 1.5
-        textField.textAlignment = .center
         textField.inputView = inspectionDatePicker
         return textField
     }()
     
-    private lazy var upcomingDataTextField: UITextField = {
-        let textField = UITextField()
-        textField.text = "Select upcoming date"
-        textField.textColor = .white
-        textField.tintColor = .white
-        textField.font = UIFont(name: EnumString.SFMed.rawValue, size: 13)
-        textField.layer.cornerRadius = 15
-        textField.layer.borderColor = UIColor(named: "Red239")?.cgColor
-        textField.layer.borderWidth = 1.5
-        textField.textAlignment = .center
+    private lazy var upcomingDataTextField: DateInspectionTextField = {
+        let textField = DateInspectionTextField(text: "Select upcoming date")
         textField.inputView = inspectionDatePicker
         return textField
     }()
@@ -127,7 +112,7 @@ final class ExtraSettingsMaintenanceViewController: BaseController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "Gray43")
         addSubviews()
-        makeConstraints()  // Отключить возможность печати ДАТИРУЕМЫХ текстфилдов
+        makeConstraints()  
     }
 }
 

@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Protocol
 
 protocol MaintenanceOutput: AnyObject {
-    
+    func setupBackgroundImage(parametr: Bool)
 }
 
 final class MaintenanceViewController: BaseController {
@@ -28,7 +28,7 @@ final class MaintenanceViewController: BaseController {
     private let mainMaintenanceLable: UILabel = {
         let lable = UILabel()
         lable.text = "Maintenance"
-        lable.font = UIFont(name: "SFProText-Medium", size: 34)
+        lable.font = UIFont(name: EnumString.SFMed.rawValue, size: 34)
         lable.textColor = .white
         return lable
     }()
@@ -38,6 +38,7 @@ final class MaintenanceViewController: BaseController {
         stack.axis = .vertical
         stack.spacing = 10
         stack.alignment = .center
+        stack.isHidden = true
         return stack
     }()
     
@@ -50,7 +51,7 @@ final class MaintenanceViewController: BaseController {
     private let aircraftMaintenanceLable: UILabel = {
         let lable = UILabel()
         lable.text = "Aircraft"
-        lable.font = UIFont(name: "SFProText-Medium", size: 23)
+        lable.font = UIFont(name: EnumString.SFMed.rawValue, size: 23)
         lable.textColor = .white
         return lable
     }()
@@ -61,6 +62,20 @@ final class MaintenanceViewController: BaseController {
         lable.font = UIFont(name: EnumString.SFMed.rawValue, size: 17)
         lable.textColor = .gray
         return lable
+    }()
+    
+    private lazy var aircraftCollectionView: UICollectionView = {
+        let loyout = UICollectionViewFlowLayout()
+        loyout.scrollDirection = .vertical
+        loyout.minimumLineSpacing = 16
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: loyout)
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.isUserInteractionEnabled = true
+        collectionView.register(MaintenanceCell.self, forCellWithReuseIdentifier: MaintenanceCell.identifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        return collectionView
     }()
     
     private lazy var aircraftMaintenanceButton: BaseButton = {
@@ -87,6 +102,9 @@ final class MaintenanceViewController: BaseController {
         view.backgroundColor = UIColor(named: "Gray43")
         addSubviews()
         makeConstraints()
+        presenter.updateData()
+        presenter.setupBackgroundImage()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: Notification.Name("Update"), object: nil)
     }
 }
 
@@ -98,12 +116,20 @@ private extension MaintenanceViewController {
         let vc = ExtraSettingsMaintenanceAssembly.build()
         navigationController?.present(vc, animated: true)
     }
+    
+    @objc func reloadData() {
+        presenter.updateData()
+        aircraftCollectionView.reloadData()
+        presenter.setupBackgroundImage()
+    }
 }
 
 // MARK: - Output
 
 extension MaintenanceViewController: MaintenanceOutput {
-    
+    func setupBackgroundImage(parametr: Bool) {
+        aircraftMaintenanceStack.isHidden = parametr
+    }
     
     
 }
@@ -119,6 +145,7 @@ private extension MaintenanceViewController {
         aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceImage)
         aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceLable)
         aircraftMaintenanceStack.addArrangedSubview(aircraftMaintenanceLableDesc)
+        view.addSubview(aircraftCollectionView)
         view.addSubview(aircraftMaintenanceButton)
     }
     
@@ -139,13 +166,35 @@ private extension MaintenanceViewController {
             make.center.equalToSuperview()
         }
         
+        aircraftCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(navigationBarView.snp.bottom).offset(16)
+            make.bottom.equalTo(aircraftMaintenanceButton.snp.top).offset(-16)
+            make.horizontalEdges.equalToSuperview()
+        }
+        
         aircraftMaintenanceButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(50)
         }
-        
-        
-        
+    }
+}
+
+// MARK: - CollectionView DataSource
+
+extension MaintenanceViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.maintenanceDataBase.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaintenanceCell.identifier, for: indexPath) as! MaintenanceCell
+        cell.configure(with: presenter.maintenanceDataBase[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width - 33, height: 100)
     }
 }
