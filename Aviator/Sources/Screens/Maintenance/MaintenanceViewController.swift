@@ -197,4 +197,10 @@ extension MaintenanceViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width - 33, height: 100)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = presenter.maintenanceDataBase[indexPath.item]
+        let vc = FirstScreenAircraftMaintenanceAssembly.build(data: data, index: indexPath.item)
+        navigationController?.present(vc, animated: true)
+    }
 }

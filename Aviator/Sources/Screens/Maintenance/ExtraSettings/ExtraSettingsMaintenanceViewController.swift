@@ -137,11 +137,11 @@ private extension ExtraSettingsMaintenanceViewController {
     }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-         let formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.dateStyle = .short
         let text = formatter.string(from: sender.date)
         presenter.datePickerValueChanged(text: text)
-     }
+    }
 }
 
 // MARK: - Output
@@ -220,14 +220,14 @@ private extension ExtraSettingsMaintenanceViewController {
             make.centerX.equalToSuperview().offset(view.frame.width * 0.23)
             make.top.equalTo(mainVerticalStack.snp.bottom).offset(16)
         }
-
+        
         lastDataTextField.snp.makeConstraints { make in
             make.top.equalTo(lastInspectionLabel.snp.bottom).offset(16)
             make.centerX.equalToSuperview().offset(-view.frame.width * 0.25)
             make.width.equalTo(view.frame.width * 0.4)
             make.height.equalTo(50)
         }
-
+        
         upcomingDataTextField.snp.makeConstraints { make in
             make.top.equalTo(upcomingInspectionLabel.snp.bottom).offset(16)
             make.centerX.equalToSuperview().offset(view.frame.width * 0.23)

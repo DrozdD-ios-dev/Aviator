@@ -27,7 +27,7 @@ final class SettingsViewController: BaseController {
     private let mainLable: UILabel = {
         let lable = UILabel()
         lable.text = "Settings"
-        lable.font = UIFont(name: "SFProText-Medium", size: 34)
+        lable.font = UIFont(name: EnumString.SFMed.rawValue, size: 34)
         lable.textColor = .white
         return lable
     }()

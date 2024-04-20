@@ -47,6 +47,11 @@
 		8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */; };
 		8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */; };
 		8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */; };
+		8ADF9F302BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F2F2BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift */; };
+		8ADF9F322BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F312BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift */; };
+		8ADF9F342BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */; };
+		8ADF9F362BD3AAC700B72ECC /* FirstScreenAircraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */; };
+		8ADF9F382BD3C9EB00B72ECC /* FirstScreenInspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F372BD3C9EB00B72ECC /* FirstScreenInspectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +93,11 @@
 		8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInspectionTextField.swift; sourceTree = "<group>"; };
 		8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftDataModel.swift; sourceTree = "<group>"; };
 		8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCell.swift; sourceTree = "<group>"; };
+		8ADF9F2F2BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenanceViewController.swift; sourceTree = "<group>"; };
+		8ADF9F312BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenancePresenter.swift; sourceTree = "<group>"; };
+		8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenanceAssembly.swift; sourceTree = "<group>"; };
+		8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraView.swift; sourceTree = "<group>"; };
+		8ADF9F372BD3C9EB00B72ECC /* FirstScreenInspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenInspectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A7768AE2BD3FF8800367DE1 /* ModelsFirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */,
+				8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */,
+			);
+			path = ModelsFirstScreen;
+			sourceTree = "<group>";
+		};
+		8A7768AF2BD4001000367DE1 /* ViewsFirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */,
+				8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */,
+				8ADF9F372BD3C9EB00B72ECC /* FirstScreenInspectionView.swift */,
+				8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */,
+			);
+			path = ViewsFirstScreen;
+			sourceTree = "<group>";
+		};
 		8ADF9EAE2BCFC8B600B72ECC = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +208,7 @@
 		8ADF9ED72BCFCDE800B72ECC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A7768AF2BD4001000367DE1 /* ViewsFirstScreen */,
 				8ADF9EE62BCFD88800B72ECC /* ViewControllers */,
 			);
 			path = Views;
@@ -193,15 +224,12 @@
 		8ADF9ED92BCFCE0C00B72ECC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8A7768AE2BD3FF8800367DE1 /* ModelsFirstScreen */,
 				8ADF9EE92BD01A0600B72ECC /* BaseTabBarItem.swift */,
 				8ADF9F152BD1278D00B72ECC /* CustomAppereance.swift */,
 				8ADF9F0F2BD05D3A00B72ECC /* BaseButton.swift */,
 				8ADF9F132BD109A400B72ECC /* SettingsButton.swift */,
 				8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */,
-				8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */,
-				8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */,
-				8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */,
-				8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +240,7 @@
 				8ADF9EDF2BCFCF4D00B72ECC /* MaintenanceViewController.swift */,
 				8ADF9EE12BCFD1B700B72ECC /* MaintenancePresenter.swift */,
 				8ADF9EE32BCFD1CE00B72ECC /* MaintenanceAssembly.swift */,
+				8ADF9F2E2BD3879200B72ECC /* FirstScreenAircraft */,
 				8ADF9F172BD12CE700B72ECC /* ExtraSettings */,
 				8ADF9F2B2BD288E400B72ECC /* Cell */,
 			);
@@ -299,6 +328,16 @@
 				8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8ADF9F2E2BD3879200B72ECC /* FirstScreenAircraft */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF9F2F2BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift */,
+				8ADF9F312BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift */,
+				8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */,
+			);
+			path = FirstScreenAircraft;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +429,7 @@
 				8ADF9EE02BCFCF4D00B72ECC /* MaintenanceViewController.swift in Sources */,
 				8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */,
 				8ADF9EFA2BD022A600B72ECC /* AnalyticsViewController.swift in Sources */,
+				8ADF9F362BD3AAC700B72ECC /* FirstScreenAircraView.swift in Sources */,
 				8ADF9EFC2BD022B200B72ECC /* AnalyticsPresenter.swift in Sources */,
 				8ADF9EF42BD0227500B72ECC /* FlightViewController.swift in Sources */,
 				8ADF9EBF2BCFC8B600B72ECC /* MainTabBarViewController.swift in Sources */,
@@ -402,19 +442,23 @@
 				8ADF9EE82BCFD89C00B72ECC /* BaseController.swift in Sources */,
 				8ADF9F122BD05D9B00B72ECC /* EnumForStrings.swift in Sources */,
 				8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */,
+				8ADF9F342BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift in Sources */,
 				8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */,
 				8ADF9EE22BCFD1B700B72ECC /* MaintenancePresenter.swift in Sources */,
 				8ADF9EE42BCFD1CE00B72ECC /* MaintenanceAssembly.swift in Sources */,
 				8ADF9EEA2BD01A0600B72ECC /* BaseTabBarItem.swift in Sources */,
 				8ADF9EF22BD0226200B72ECC /* MonitoringAssembly.swift in Sources */,
+				8ADF9F382BD3C9EB00B72ECC /* FirstScreenInspectionView.swift in Sources */,
 				8ADF9F1B2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift in Sources */,
 				8ADF9EBB2BCFC8B600B72ECC /* AppDelegate.swift in Sources */,
 				8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */,
 				8ADF9EEE2BD0215000B72ECC /* MonitoringViewController.swift in Sources */,
+				8ADF9F322BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift in Sources */,
 				8ADF9F192BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift in Sources */,
 				8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */,
 				8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */,
 				8ADF9F002BD022D300B72ECC /* SettingsViewController.swift in Sources */,
+				8ADF9F302BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,10 +59,7 @@ final class ExtraSettingsMaintenancePresenter: ExtraSettingsMaintenanceInput {
             saveDataToRealm()
         } else {
             viewController?.showAlert()
-            try! realm.write { // WARNING ВРЕМЕННО
-                realm.deleteAll()
-                NotificationCenter.default.post(name: Notification.Name("Update"), object: nil)
-            }
+            NotificationCenter.default.post(name: Notification.Name("Update"), object: nil)
         }
     }
     
