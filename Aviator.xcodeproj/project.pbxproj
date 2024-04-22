@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A7768B22BD6737800367DE1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8A7768B12BD6737800367DE1 /* SnapKit */; };
 		8ADF9EBB2BCFC8B600B72ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBA2BCFC8B600B72ECC /* AppDelegate.swift */; };
 		8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBC2BCFC8B600B72ECC /* SceneDelegate.swift */; };
 		8ADF9EBF2BCFC8B600B72ECC /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBE2BCFC8B600B72ECC /* MainTabBarViewController.swift */; };
 		8ADF9EC42BCFC8B800B72ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF9EC32BCFC8B800B72ECC /* Assets.xcassets */; };
 		8ADF9EC72BCFC8B800B72ECC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF9EC62BCFC8B800B72ECC /* Base */; };
-		8ADF9ED32BCFCD9B00B72ECC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9ED22BCFCD9B00B72ECC /* SnapKit */; };
-		8ADF9ED52BCFCD9B00B72ECC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9ED42BCFCD9B00B72ECC /* SnapKit-Dynamic */; };
 		8ADF9EE02BCFCF4D00B72ECC /* MaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EDF2BCFCF4D00B72ECC /* MaintenanceViewController.swift */; };
 		8ADF9EE22BCFD1B700B72ECC /* MaintenancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EE12BCFD1B700B72ECC /* MaintenancePresenter.swift */; };
 		8ADF9EE42BCFD1CE00B72ECC /* MaintenanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EE32BCFD1CE00B72ECC /* MaintenanceAssembly.swift */; };
@@ -105,10 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7768B22BD6737800367DE1 /* SnapKit in Frameworks */,
 				8ADF9F262BD24D8000B72ECC /* RealmSwift in Frameworks */,
 				8ADF9F242BD24D8000B72ECC /* Realm in Frameworks */,
-				8ADF9ED32BCFCD9B00B72ECC /* SnapKit in Frameworks */,
-				8ADF9ED52BCFCD9B00B72ECC /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,10 +355,9 @@
 			);
 			name = Aviator;
 			packageProductDependencies = (
-				8ADF9ED22BCFCD9B00B72ECC /* SnapKit */,
-				8ADF9ED42BCFCD9B00B72ECC /* SnapKit-Dynamic */,
 				8ADF9F232BD24D8000B72ECC /* Realm */,
 				8ADF9F252BD24D8000B72ECC /* RealmSwift */,
+				8A7768B12BD6737800367DE1 /* SnapKit */,
 			);
 			productName = Aviator;
 			productReference = 8ADF9EB72BCFC8B600B72ECC /* Aviator.app */;
@@ -391,8 +388,8 @@
 			);
 			mainGroup = 8ADF9EAE2BCFC8B600B72ECC;
 			packageReferences = (
-				8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8ADF9F222BD24D8000B72ECC /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8A7768B02BD6737800367DE1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8ADF9EB82BCFC8B600B72ECC /* Products */;
 			projectDirPath = "";
@@ -677,11 +674,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		8A7768B02BD6737800367DE1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
 				minimumVersion = 5.7.1;
 			};
 		};
@@ -696,15 +693,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8ADF9ED22BCFCD9B00B72ECC /* SnapKit */ = {
+		8A7768B12BD6737800367DE1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 8A7768B02BD6737800367DE1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		8ADF9ED42BCFCD9B00B72ECC /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8ADF9ED12BCFCD9B00B72ECC /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		8ADF9F232BD24D8000B72ECC /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

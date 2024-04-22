@@ -75,6 +75,16 @@ final class FirstScreenAircraftMaintenanceViewController: BaseController {
 
 private extension FirstScreenAircraftMaintenanceViewController {
     @objc func trashImageButtonTapped() {
+        let alertController = UIAlertController(title: "Deletion", message: "Do you really want to delete it?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "No", style: .default)
+        let actionDelete = UIAlertAction(title: "Yes", style: .destructive) { action in
+            self.deleteOneItem() }
+        alertController.addAction(action)
+        alertController.addAction(actionDelete)
+        present(alertController, animated: true)
+    }
+    
+    func deleteOneItem() {
         presenter.deleteOneItem()
     }
 }
