@@ -104,7 +104,7 @@ final class MaintenanceViewController: BaseController {
         makeConstraints()
         presenter.updateData()
         presenter.setupBackgroundImage()
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: Notification.Name("Update"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadDataFirstScreen), name: Notification.Name("Update"), object: nil)
     }
 }
 
@@ -117,7 +117,7 @@ private extension MaintenanceViewController {
         navigationController?.present(vc, animated: true)
     }
     
-    @objc func reloadData() {
+    @objc func reloadDataFirstScreen() {
         presenter.updateData()
         aircraftCollectionView.reloadData()
         presenter.setupBackgroundImage()

@@ -13,7 +13,7 @@ import RealmSwift
 protocol FirstScreenMaintenanceAircraftInput {
     func viewDidLoad()
     func deleteOneItem()
-    var data: AircraftDataModel { get }
+    var data: AircraftSavedData { get }
 }
 
 final class FirstScreenAircraftMaintenancePresenter: FirstScreenMaintenanceAircraftInput {
@@ -22,14 +22,14 @@ final class FirstScreenAircraftMaintenancePresenter: FirstScreenMaintenanceAircr
     
     weak var viewController: FirstScreenAircraftMaintenanceOutput?
     
-    var data: AircraftDataModel
+    var data: AircraftSavedData
     private let index: Int
     private let realm = try! Realm()
-    private var itemsAircraftModel: Results<AircraftDataModel>!
+    private var itemsAircraftModel: Results<AircraftSavedData>!
 
     // MARK: - Init
     
-    init(data: AircraftDataModel, index: Int) {
+    init(data: AircraftSavedData, index: Int) {
         self.data = data
         self.index = index 
     }
@@ -41,7 +41,7 @@ final class FirstScreenAircraftMaintenancePresenter: FirstScreenMaintenanceAircr
     }
     
     func deleteOneItem() {
-        itemsAircraftModel = realm.objects(AircraftDataModel.self)
+        itemsAircraftModel = realm.objects(AircraftSavedData.self)
         try! realm.write {
             realm.delete(itemsAircraftModel[index])
             NotificationCenter.default.post(name: Notification.Name("Update"), object: nil)

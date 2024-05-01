@@ -16,14 +16,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         openViewController()
+        installFirstApp()
     }
 
     func openViewController() {
-        let viewController = MainTabBarViewController()
+        let viewController = StartAssembly.build() //MainTabBarViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
+    }
+    
+    func installFirstApp() {
+        if UserDefaults.standard.bool(forKey: "FirstOpenApp") == false {
+            UserDefaults.standard.set(true, forKey: "FirstOpenApp")
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

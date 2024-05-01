@@ -57,7 +57,7 @@ final class FirstScreenInspectionView: UIView {
     
     // MARK: - Properties
     
-    private var arrayTestLabels: [UILabel] = []
+    private var inspectionsLabels: [UILabel] = []
     
     // MARK: - Init
     
@@ -79,17 +79,17 @@ final class FirstScreenInspectionView: UIView {
             let label = UILabel()
             label.textColor = .white
             label.font = UIFont(name: EnumString.SFMed.rawValue, size: 17)
-            arrayTestLabels.append(label)
+            inspectionsLabels.append(label)
         }
     }
     
     // MARK: - Public Functions
     
-    func configure(data: AircraftDataModel) {
-        arrayTestLabels[0].text = data.model
-        arrayTestLabels[1].text = data.serialNumber
-        arrayTestLabels[2].text = data.lastInspection
-        arrayTestLabels[3].text = data.upcomingInspection
+    func configure(data: AircraftSavedData) {
+        inspectionsLabels[0].text = data.model
+        inspectionsLabels[1].text = data.serialNumber
+        inspectionsLabels[2].text = data.lastInspection
+        inspectionsLabels[3].text = data.upcomingInspection
     }
 }
 
@@ -101,28 +101,26 @@ private extension FirstScreenInspectionView {
         
         verticalMainStack.addArrangedSubview(horizontalOneStack)
         horizontalOneStack.addArrangedSubview(madelView)
-        madelView.addSubview(arrayTestLabels[0])
+        madelView.addSubview(inspectionsLabels[0])
         horizontalOneStack.addArrangedSubview(serialNumberView)
-        serialNumberView.addSubview(arrayTestLabels[1])
+        serialNumberView.addSubview(inspectionsLabels[1])
         
         verticalMainStack.addArrangedSubview(horizontalTwoStack)
         horizontalTwoStack.addArrangedSubview(lastInspectionView)
-        lastInspectionView.addSubview(arrayTestLabels[2])
+        lastInspectionView.addSubview(inspectionsLabels[2])
         horizontalTwoStack.addArrangedSubview(upcomingInspectionView)
-        upcomingInspectionView.addSubview(arrayTestLabels[3])
+        upcomingInspectionView.addSubview(inspectionsLabels[3])
     }
     
     func makeConstraints() {
         verticalMainStack.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            print(verticalMainStack.frame.width)
         }
         
         madelView.snp.makeConstraints { make in
             make.height.equalTo(75)
             make.width.equalTo(172)
-            print((verticalMainStack.frame.width - 48) / 2)
         }
         
         serialNumberView.snp.makeConstraints { make in
@@ -140,21 +138,21 @@ private extension FirstScreenInspectionView {
             make.width.equalTo(172)
         }
         
-        arrayTestLabels[0].snp.makeConstraints { make in
+        inspectionsLabels[0].snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(40)
             make.centerY.equalToSuperview().offset(10)
         }
         
-        arrayTestLabels[1].snp.makeConstraints { make in
+        inspectionsLabels[1].snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(40)
             make.centerY.equalToSuperview().offset(10)
         }
         
-        arrayTestLabels[2].snp.makeConstraints { make in
+        inspectionsLabels[2].snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(40)
             make.centerY.equalToSuperview().offset(10)
         }
-        arrayTestLabels[3].snp.makeConstraints { make in
+        inspectionsLabels[3].snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(40)
             make.centerY.equalToSuperview().offset(10)
         }

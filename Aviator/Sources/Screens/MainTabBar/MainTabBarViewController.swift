@@ -24,6 +24,7 @@ class MainTabBarViewController: UITabBarController {
         createTabBarItems()
         setupAppearance()
         createCustomLine()
+        navigationItem.hidesBackButton = true
     }
     
     private func createTabBarItems() {

@@ -58,7 +58,7 @@ final class MaintenanceCell: UICollectionViewCell {
     
     // MARK: - Public function
     
-    func configure(with model: AircraftDataModel) {
+    func configure(with model: AircraftSavedData) {
         aircraftName.text = model.name
         aircraftModel.text = model.model
     }

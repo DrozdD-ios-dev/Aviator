@@ -35,21 +35,21 @@ final class ExtraSettingsMaintenanceViewController: BaseController {
         return stack
     }()
     
-    private lazy var nameTaxtField: CustomTextField = {
+    private lazy var nameTextField: CustomTextField = {
         let textField = CustomTextField(text: "   Name   ")
-        textField.addTarget(self, action: #selector(nameTaxtFieldValueChanged(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(nameTextFieldValueChanged(_:)), for: .editingChanged)
         return textField
     }()
     
-    private lazy var modelTaxtField: CustomTextField = {
+    private lazy var modelTextField: CustomTextField = {
         let textField = CustomTextField(text: "   Model   ")
-        textField.addTarget(self, action: #selector(modelTaxtFieldValueChanged(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(modelTextFieldValueChanged(_:)), for: .editingChanged)
         return textField
     }()
     
-    private lazy var serialNumberTaxtField: CustomTextField = {
+    private lazy var serialNumberTextField: CustomTextField = {
         let textField = CustomTextField(text: "   Serial number   ")
-        textField.addTarget(self, action: #selector(selialNumberTaxtFieldValueChanged(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(selialNumberTextFieldValueChanged(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -120,15 +120,15 @@ final class ExtraSettingsMaintenanceViewController: BaseController {
 
 private extension ExtraSettingsMaintenanceViewController {
     
-    @objc func nameTaxtFieldValueChanged (_ textField: UITextField) {
+    @objc func nameTextFieldValueChanged (_ textField: UITextField) {
         presenter.updateNameAircraft(text: textField.text ?? "")
     }
     
-    @objc func modelTaxtFieldValueChanged (_ textField: UITextField) {
+    @objc func modelTextFieldValueChanged (_ textField: UITextField) {
         presenter.updateModelAircraft(text: textField.text ?? "")
     }
     
-    @objc func selialNumberTaxtFieldValueChanged (_ textField: UITextField) {
+    @objc func selialNumberTextFieldValueChanged (_ textField: UITextField) {
         presenter.updateSerialNumberAircraft(text: textField.text ?? "")
     }
     
@@ -175,9 +175,9 @@ private extension ExtraSettingsMaintenanceViewController {
     func addSubviews() {
         view.addSubview(mainExtraSettingsLable)
         view.addSubview(mainVerticalStack)
-        mainVerticalStack.addArrangedSubview(nameTaxtField)
-        mainVerticalStack.addArrangedSubview(modelTaxtField)
-        mainVerticalStack.addArrangedSubview(serialNumberTaxtField)
+        mainVerticalStack.addArrangedSubview(nameTextField)
+        mainVerticalStack.addArrangedSubview(modelTextField)
+        mainVerticalStack.addArrangedSubview(serialNumberTextField)
         view.addSubview(lastInspectionLabel)
         view.addSubview(upcomingInspectionLabel)
         view.addSubview(lastDataTextField)
@@ -196,17 +196,17 @@ private extension ExtraSettingsMaintenanceViewController {
             make.horizontalEdges.equalToSuperview()
         }
         
-        nameTaxtField.snp.makeConstraints { make in
+        nameTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(50)
         }
         
-        modelTaxtField.snp.makeConstraints { make in
+        modelTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(50)
         }
         
-        serialNumberTaxtField.snp.makeConstraints { make in
+        serialNumberTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(50)
         }

@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8A7768B22BD6737800367DE1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8A7768B12BD6737800367DE1 /* SnapKit */; };
+		8A7768D12BD8B36000367DE1 /* MonitoringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768D02BD8B36000367DE1 /* MonitoringCell.swift */; };
+		8A7768D32BD8B38900367DE1 /* SecondScreenMonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768D22BD8B38900367DE1 /* SecondScreenMonitoringViewController.swift */; };
+		8A7768D52BD8B39800367DE1 /* SecondScreenMonitoringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768D42BD8B39800367DE1 /* SecondScreenMonitoringPresenter.swift */; };
+		8A7768D72BD8B3A400367DE1 /* SecondScreenMonitoringAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768D62BD8B3A400367DE1 /* SecondScreenMonitoringAssembly.swift */; };
+		8A7768D92BD8B3C900367DE1 /* CreateScreenMonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768D82BD8B3C900367DE1 /* CreateScreenMonitoringViewController.swift */; };
+		8A7768DB2BD8B3D300367DE1 /* CreateScreenMonitoringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768DA2BD8B3D300367DE1 /* CreateScreenMonitoringPresenter.swift */; };
+		8A7768DD2BD8B3DC00367DE1 /* CreateScreenMonitoringAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768DC2BD8B3DC00367DE1 /* CreateScreenMonitoringAssembly.swift */; };
+		8A7768DF2BD8BE3400367DE1 /* StatusSenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768DE2BD8BE3400367DE1 /* StatusSenderButton.swift */; };
+		8A7768E22BD8C45000367DE1 /* MonitoringDataParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768E12BD8C45000367DE1 /* MonitoringDataParameters.swift */; };
+		8A7768E42BD8C50800367DE1 /* MonitoringParametersSavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768E32BD8C50800367DE1 /* MonitoringParametersSavedData.swift */; };
+		8A7768E72BD9052200367DE1 /* SecondScreenParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768E62BD9052200367DE1 /* SecondScreenParametersView.swift */; };
+		8A7768E92BD90EB800367DE1 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7768E82BD90EB800367DE1 /* SecondScreenView.swift */; };
 		8ADF9EBB2BCFC8B600B72ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBA2BCFC8B600B72ECC /* AppDelegate.swift */; };
 		8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBC2BCFC8B600B72ECC /* SceneDelegate.swift */; };
 		8ADF9EBF2BCFC8B600B72ECC /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9EBE2BCFC8B600B72ECC /* MainTabBarViewController.swift */; };
@@ -44,16 +56,48 @@
 		8ADF9F242BD24D8000B72ECC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9F232BD24D8000B72ECC /* Realm */; };
 		8ADF9F262BD24D8000B72ECC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8ADF9F252BD24D8000B72ECC /* RealmSwift */; };
 		8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */; };
-		8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */; };
+		8ADF9F2A2BD2775600B72ECC /* AircraftSavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F292BD2775600B72ECC /* AircraftSavedData.swift */; };
 		8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */; };
 		8ADF9F302BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F2F2BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift */; };
 		8ADF9F322BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F312BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift */; };
 		8ADF9F342BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */; };
 		8ADF9F362BD3AAC700B72ECC /* FirstScreenAircraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */; };
 		8ADF9F382BD3C9EB00B72ECC /* FirstScreenInspectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF9F372BD3C9EB00B72ECC /* FirstScreenInspectionView.swift */; };
+		8AE23C712BD92A7C00F278F6 /* CreateCheckingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C702BD92A7C00F278F6 /* CreateCheckingViewController.swift */; };
+		8AE23C732BD92A8900F278F6 /* CreateCheckingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C722BD92A8900F278F6 /* CreateCheckingPresenter.swift */; };
+		8AE23C752BD92A9900F278F6 /* CreateCheckingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C742BD92A9900F278F6 /* CreateCheckingAssembly.swift */; };
+		8AE23C782BD9300000F278F6 /* FlightCheckingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C772BD9300000F278F6 /* FlightCheckingData.swift */; };
+		8AE23C7A2BD9303700F278F6 /* FlightCheckingSaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C792BD9303700F278F6 /* FlightCheckingSaveData.swift */; };
+		8AE23C7C2BD9342500F278F6 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C7B2BD9342500F278F6 /* FlightCell.swift */; };
+		8AE23C7E2BD9351200F278F6 /* ThirdScreenFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C7D2BD9351200F278F6 /* ThirdScreenFlightViewController.swift */; };
+		8AE23C802BD9352300F278F6 /* ThirdScreenFlightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C7F2BD9352300F278F6 /* ThirdScreenFlightPresenter.swift */; };
+		8AE23C822BD9354600F278F6 /* ThirdScreenFlightAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C812BD9354600F278F6 /* ThirdScreenFlightAssembly.swift */; };
+		8AE23C842BDA643200F278F6 /* VerificationCheckingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C832BDA643200F278F6 /* VerificationCheckingData.swift */; };
+		8AE23C862BDA644200F278F6 /* VerificationCheckingSaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C852BDA644100F278F6 /* VerificationCheckingSaveData.swift */; };
+		8AE23C892BDA82F000F278F6 /* AnalyticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C882BDA82F000F278F6 /* AnalyticsCell.swift */; };
+		8AE23C8C2BDA837800F278F6 /* AnalyticsExtraScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C8B2BDA837800F278F6 /* AnalyticsExtraScreenViewController.swift */; };
+		8AE23C8E2BDA838500F278F6 /* AnalyticsExtraScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C8D2BDA838500F278F6 /* AnalyticsExtraScreenPresenter.swift */; };
+		8AE23C902BDA839300F278F6 /* AnalyticsExtraScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C8F2BDA839300F278F6 /* AnalyticsExtraScreenAssembly.swift */; };
+		8AE23C942BDA908D00F278F6 /* AnalyticsScreenParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C932BDA908D00F278F6 /* AnalyticsScreenParameters.swift */; };
+		8AE23C962BDA91B800F278F6 /* AnalyticsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C952BDA91B800F278F6 /* AnalyticsScreenView.swift */; };
+		8AE23C992BDA9AB000F278F6 /* StartVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C982BDA9AB000F278F6 /* StartVievController.swift */; };
+		8AE23C9B2BDA9AC100F278F6 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C9A2BDA9AC100F278F6 /* StartPresenter.swift */; };
+		8AE23C9D2BDA9ACC00F278F6 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE23C9C2BDA9ACC00F278F6 /* StartAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A7768D02BD8B36000367DE1 /* MonitoringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringCell.swift; sourceTree = "<group>"; };
+		8A7768D22BD8B38900367DE1 /* SecondScreenMonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenMonitoringViewController.swift; sourceTree = "<group>"; };
+		8A7768D42BD8B39800367DE1 /* SecondScreenMonitoringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenMonitoringPresenter.swift; sourceTree = "<group>"; };
+		8A7768D62BD8B3A400367DE1 /* SecondScreenMonitoringAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenMonitoringAssembly.swift; sourceTree = "<group>"; };
+		8A7768D82BD8B3C900367DE1 /* CreateScreenMonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenMonitoringViewController.swift; sourceTree = "<group>"; };
+		8A7768DA2BD8B3D300367DE1 /* CreateScreenMonitoringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenMonitoringPresenter.swift; sourceTree = "<group>"; };
+		8A7768DC2BD8B3DC00367DE1 /* CreateScreenMonitoringAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenMonitoringAssembly.swift; sourceTree = "<group>"; };
+		8A7768DE2BD8BE3400367DE1 /* StatusSenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSenderButton.swift; sourceTree = "<group>"; };
+		8A7768E12BD8C45000367DE1 /* MonitoringDataParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringDataParameters.swift; sourceTree = "<group>"; };
+		8A7768E32BD8C50800367DE1 /* MonitoringParametersSavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringParametersSavedData.swift; sourceTree = "<group>"; };
+		8A7768E62BD9052200367DE1 /* SecondScreenParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenParametersView.swift; sourceTree = "<group>"; };
+		8A7768E82BD90EB800367DE1 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
 		8ADF9EB72BCFC8B600B72ECC /* Aviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADF9EBA2BCFC8B600B72ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ADF9EBC2BCFC8B600B72ECC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,13 +134,33 @@
 		8ADF9F1E2BD13E4600B72ECC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceDataAircraft.swift; sourceTree = "<group>"; };
 		8ADF9F272BD2649500B72ECC /* DateInspectionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInspectionTextField.swift; sourceTree = "<group>"; };
-		8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftDataModel.swift; sourceTree = "<group>"; };
+		8ADF9F292BD2775600B72ECC /* AircraftSavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftSavedData.swift; sourceTree = "<group>"; };
 		8ADF9F2C2BD2890200B72ECC /* MaintenanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceCell.swift; sourceTree = "<group>"; };
 		8ADF9F2F2BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenanceViewController.swift; sourceTree = "<group>"; };
 		8ADF9F312BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenancePresenter.swift; sourceTree = "<group>"; };
 		8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraftMaintenanceAssembly.swift; sourceTree = "<group>"; };
 		8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenAircraView.swift; sourceTree = "<group>"; };
 		8ADF9F372BD3C9EB00B72ECC /* FirstScreenInspectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenInspectionView.swift; sourceTree = "<group>"; };
+		8AE23C702BD92A7C00F278F6 /* CreateCheckingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckingViewController.swift; sourceTree = "<group>"; };
+		8AE23C722BD92A8900F278F6 /* CreateCheckingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckingPresenter.swift; sourceTree = "<group>"; };
+		8AE23C742BD92A9900F278F6 /* CreateCheckingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCheckingAssembly.swift; sourceTree = "<group>"; };
+		8AE23C772BD9300000F278F6 /* FlightCheckingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCheckingData.swift; sourceTree = "<group>"; };
+		8AE23C792BD9303700F278F6 /* FlightCheckingSaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCheckingSaveData.swift; sourceTree = "<group>"; };
+		8AE23C7B2BD9342500F278F6 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		8AE23C7D2BD9351200F278F6 /* ThirdScreenFlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenFlightViewController.swift; sourceTree = "<group>"; };
+		8AE23C7F2BD9352300F278F6 /* ThirdScreenFlightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenFlightPresenter.swift; sourceTree = "<group>"; };
+		8AE23C812BD9354600F278F6 /* ThirdScreenFlightAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenFlightAssembly.swift; sourceTree = "<group>"; };
+		8AE23C832BDA643200F278F6 /* VerificationCheckingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCheckingData.swift; sourceTree = "<group>"; };
+		8AE23C852BDA644100F278F6 /* VerificationCheckingSaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCheckingSaveData.swift; sourceTree = "<group>"; };
+		8AE23C882BDA82F000F278F6 /* AnalyticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCell.swift; sourceTree = "<group>"; };
+		8AE23C8B2BDA837800F278F6 /* AnalyticsExtraScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsExtraScreenViewController.swift; sourceTree = "<group>"; };
+		8AE23C8D2BDA838500F278F6 /* AnalyticsExtraScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsExtraScreenPresenter.swift; sourceTree = "<group>"; };
+		8AE23C8F2BDA839300F278F6 /* AnalyticsExtraScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsExtraScreenAssembly.swift; sourceTree = "<group>"; };
+		8AE23C932BDA908D00F278F6 /* AnalyticsScreenParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsScreenParameters.swift; sourceTree = "<group>"; };
+		8AE23C952BDA91B800F278F6 /* AnalyticsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsScreenView.swift; sourceTree = "<group>"; };
+		8AE23C982BDA9AB000F278F6 /* StartVievController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVievController.swift; sourceTree = "<group>"; };
+		8AE23C9A2BDA9AC100F278F6 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		8AE23C9C2BDA9ACC00F278F6 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				8ADF9F202BD1618E00B72ECC /* MaintenanceDataAircraft.swift */,
-				8ADF9F292BD2775600B72ECC /* AircraftDataModel.swift */,
+				8ADF9F292BD2775600B72ECC /* AircraftSavedData.swift */,
 			);
 			path = ModelsFirstScreen;
 			sourceTree = "<group>";
@@ -131,6 +195,52 @@
 				8ADF9F352BD3AAC700B72ECC /* FirstScreenAircraView.swift */,
 			);
 			path = ViewsFirstScreen;
+			sourceTree = "<group>";
+		};
+		8A7768CD2BD8B2D200367DE1 /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A7768D22BD8B38900367DE1 /* SecondScreenMonitoringViewController.swift */,
+				8A7768D42BD8B39800367DE1 /* SecondScreenMonitoringPresenter.swift */,
+				8A7768D62BD8B3A400367DE1 /* SecondScreenMonitoringAssembly.swift */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		8A7768CE2BD8B30000367DE1 /* CreateScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A7768D82BD8B3C900367DE1 /* CreateScreenMonitoringViewController.swift */,
+				8A7768DA2BD8B3D300367DE1 /* CreateScreenMonitoringPresenter.swift */,
+				8A7768DC2BD8B3DC00367DE1 /* CreateScreenMonitoringAssembly.swift */,
+			);
+			path = CreateScreen;
+			sourceTree = "<group>";
+		};
+		8A7768CF2BD8B33C00367DE1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A7768D02BD8B36000367DE1 /* MonitoringCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8A7768E02BD8C40C00367DE1 /* ModelsSecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A7768E12BD8C45000367DE1 /* MonitoringDataParameters.swift */,
+				8A7768E32BD8C50800367DE1 /* MonitoringParametersSavedData.swift */,
+			);
+			path = ModelsSecondScreen;
+			sourceTree = "<group>";
+		};
+		8A7768E52BD904C000367DE1 /* ViewsSecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A7768E62BD9052200367DE1 /* SecondScreenParametersView.swift */,
+				8A7768E82BD90EB800367DE1 /* SecondScreenView.swift */,
+			);
+			path = ViewsSecondScreen;
 			sourceTree = "<group>";
 		};
 		8ADF9EAE2BCFC8B600B72ECC = {
@@ -166,7 +276,6 @@
 				8ADF9ED62BCFCDD900B72ECC /* Screens */,
 				8ADF9ED72BCFCDE800B72ECC /* Views */,
 				8ADF9ED92BCFCE0C00B72ECC /* Models */,
-				8ADF9ED82BCFCDFC00B72ECC /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -193,6 +302,7 @@
 		8ADF9ED62BCFCDD900B72ECC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8AE23C972BDA9A8B00F278F6 /* FirstStartScreen */,
 				8ADF9EE52BCFD56100B72ECC /* MainTabBar */,
 				8ADF9EDA2BCFCE4600B72ECC /* Maintenance */,
 				8ADF9EDB2BCFCE7B00B72ECC /* Monitoring */,
@@ -206,26 +316,24 @@
 		8ADF9ED72BCFCDE800B72ECC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8AE23C922BDA904800F278F6 /* ViewsAnalyticsScreen */,
 				8A7768AF2BD4001000367DE1 /* ViewsFirstScreen */,
+				8A7768E52BD904C000367DE1 /* ViewsSecondScreen */,
 				8ADF9EE62BCFD88800B72ECC /* ViewControllers */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8ADF9ED82BCFCDFC00B72ECC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8ADF9ED92BCFCE0C00B72ECC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8A7768AE2BD3FF8800367DE1 /* ModelsFirstScreen */,
+				8A7768E02BD8C40C00367DE1 /* ModelsSecondScreen */,
+				8AE23C762BD92FB400F278F6 /* ModelsThirdScreen */,
 				8ADF9EE92BD01A0600B72ECC /* BaseTabBarItem.swift */,
 				8ADF9F152BD1278D00B72ECC /* CustomAppereance.swift */,
 				8ADF9F0F2BD05D3A00B72ECC /* BaseButton.swift */,
+				8A7768DE2BD8BE3400367DE1 /* StatusSenderButton.swift */,
 				8ADF9F132BD109A400B72ECC /* SettingsButton.swift */,
 				8ADF9F112BD05D9B00B72ECC /* EnumForStrings.swift */,
 			);
@@ -251,6 +359,9 @@
 				8ADF9EED2BD0215000B72ECC /* MonitoringViewController.swift */,
 				8ADF9EEF2BD0225600B72ECC /* MonitoringPresenter.swift */,
 				8ADF9EF12BD0226200B72ECC /* MonitoringAssembly.swift */,
+				8A7768CD2BD8B2D200367DE1 /* SecondScreen */,
+				8A7768CE2BD8B30000367DE1 /* CreateScreen */,
+				8A7768CF2BD8B33C00367DE1 /* Cell */,
 			);
 			path = Monitoring;
 			sourceTree = "<group>";
@@ -261,6 +372,9 @@
 				8ADF9EF32BD0227500B72ECC /* FlightViewController.swift */,
 				8ADF9EF52BD0228200B72ECC /* FlightPresenter.swift */,
 				8ADF9EF72BD0228E00B72ECC /* FlightAssembly.swift */,
+				8AE23C6D2BD925C500F278F6 /* ThirdScreen | stat checking */,
+				8AE23C6E2BD925DC00F278F6 /* CreateChecking */,
+				8AE23C6F2BD9263300F278F6 /* Cell */,
 			);
 			path = Flight;
 			sourceTree = "<group>";
@@ -271,6 +385,8 @@
 				8ADF9EF92BD022A600B72ECC /* AnalyticsViewController.swift */,
 				8ADF9EFB2BD022B200B72ECC /* AnalyticsPresenter.swift */,
 				8ADF9EFD2BD022BE00B72ECC /* AnalyticsAssembly.swift */,
+				8AE23C8A2BDA834E00F278F6 /* AnalyticsExtraScreen */,
+				8AE23C872BDA82DC00F278F6 /* Cell */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -336,6 +452,82 @@
 				8ADF9F332BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift */,
 			);
 			path = FirstScreenAircraft;
+			sourceTree = "<group>";
+		};
+		8AE23C6D2BD925C500F278F6 /* ThirdScreen | stat checking */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C7D2BD9351200F278F6 /* ThirdScreenFlightViewController.swift */,
+				8AE23C7F2BD9352300F278F6 /* ThirdScreenFlightPresenter.swift */,
+				8AE23C812BD9354600F278F6 /* ThirdScreenFlightAssembly.swift */,
+			);
+			path = "ThirdScreen | stat checking";
+			sourceTree = "<group>";
+		};
+		8AE23C6E2BD925DC00F278F6 /* CreateChecking */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C702BD92A7C00F278F6 /* CreateCheckingViewController.swift */,
+				8AE23C722BD92A8900F278F6 /* CreateCheckingPresenter.swift */,
+				8AE23C742BD92A9900F278F6 /* CreateCheckingAssembly.swift */,
+			);
+			path = CreateChecking;
+			sourceTree = "<group>";
+		};
+		8AE23C6F2BD9263300F278F6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C7B2BD9342500F278F6 /* FlightCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8AE23C762BD92FB400F278F6 /* ModelsThirdScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C852BDA644100F278F6 /* VerificationCheckingSaveData.swift */,
+				8AE23C832BDA643200F278F6 /* VerificationCheckingData.swift */,
+				8AE23C792BD9303700F278F6 /* FlightCheckingSaveData.swift */,
+				8AE23C772BD9300000F278F6 /* FlightCheckingData.swift */,
+			);
+			path = ModelsThirdScreen;
+			sourceTree = "<group>";
+		};
+		8AE23C872BDA82DC00F278F6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C882BDA82F000F278F6 /* AnalyticsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8AE23C8A2BDA834E00F278F6 /* AnalyticsExtraScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C8B2BDA837800F278F6 /* AnalyticsExtraScreenViewController.swift */,
+				8AE23C8D2BDA838500F278F6 /* AnalyticsExtraScreenPresenter.swift */,
+				8AE23C8F2BDA839300F278F6 /* AnalyticsExtraScreenAssembly.swift */,
+			);
+			path = AnalyticsExtraScreen;
+			sourceTree = "<group>";
+		};
+		8AE23C922BDA904800F278F6 /* ViewsAnalyticsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C932BDA908D00F278F6 /* AnalyticsScreenParameters.swift */,
+				8AE23C952BDA91B800F278F6 /* AnalyticsScreenView.swift */,
+			);
+			path = ViewsAnalyticsScreen;
+			sourceTree = "<group>";
+		};
+		8AE23C972BDA9A8B00F278F6 /* FirstStartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AE23C982BDA9AB000F278F6 /* StartVievController.swift */,
+				8AE23C9A2BDA9AC100F278F6 /* StartPresenter.swift */,
+				8AE23C9C2BDA9ACC00F278F6 /* StartAssembly.swift */,
+			);
+			path = FirstStartScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,43 +611,75 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7768E22BD8C45000367DE1 /* MonitoringDataParameters.swift in Sources */,
 				8ADF9F1F2BD13E4600B72ECC /* CustomTextField.swift in Sources */,
 				8ADF9EF02BD0225600B72ECC /* MonitoringPresenter.swift in Sources */,
 				8ADF9EFE2BD022BE00B72ECC /* AnalyticsAssembly.swift in Sources */,
 				8ADF9F042BD022ED00B72ECC /* SettingsAssembly.swift in Sources */,
 				8ADF9EE02BCFCF4D00B72ECC /* MaintenanceViewController.swift in Sources */,
-				8ADF9F2A2BD2775600B72ECC /* AircraftDataModel.swift in Sources */,
+				8AE23C7A2BD9303700F278F6 /* FlightCheckingSaveData.swift in Sources */,
+				8A7768E92BD90EB800367DE1 /* SecondScreenView.swift in Sources */,
+				8AE23C7E2BD9351200F278F6 /* ThirdScreenFlightViewController.swift in Sources */,
+				8AE23C962BDA91B800F278F6 /* AnalyticsScreenView.swift in Sources */,
+				8A7768D32BD8B38900367DE1 /* SecondScreenMonitoringViewController.swift in Sources */,
+				8ADF9F2A2BD2775600B72ECC /* AircraftSavedData.swift in Sources */,
+				8AE23C782BD9300000F278F6 /* FlightCheckingData.swift in Sources */,
+				8AE23C992BDA9AB000F278F6 /* StartVievController.swift in Sources */,
+				8A7768D52BD8B39800367DE1 /* SecondScreenMonitoringPresenter.swift in Sources */,
+				8AE23C862BDA644200F278F6 /* VerificationCheckingSaveData.swift in Sources */,
 				8ADF9EFA2BD022A600B72ECC /* AnalyticsViewController.swift in Sources */,
+				8AE23C842BDA643200F278F6 /* VerificationCheckingData.swift in Sources */,
 				8ADF9F362BD3AAC700B72ECC /* FirstScreenAircraView.swift in Sources */,
 				8ADF9EFC2BD022B200B72ECC /* AnalyticsPresenter.swift in Sources */,
 				8ADF9EF42BD0227500B72ECC /* FlightViewController.swift in Sources */,
 				8ADF9EBF2BCFC8B600B72ECC /* MainTabBarViewController.swift in Sources */,
 				8ADF9F162BD1278D00B72ECC /* CustomAppereance.swift in Sources */,
+				8A7768D72BD8B3A400367DE1 /* SecondScreenMonitoringAssembly.swift in Sources */,
 				8ADF9EF62BD0228200B72ECC /* FlightPresenter.swift in Sources */,
 				8ADF9F022BD022DF00B72ECC /* SettingsPresenter.swift in Sources */,
 				8ADF9F102BD05D3A00B72ECC /* BaseButton.swift in Sources */,
 				8ADF9EF82BD0228E00B72ECC /* FlightAssembly.swift in Sources */,
+				8A7768DF2BD8BE3400367DE1 /* StatusSenderButton.swift in Sources */,
+				8AE23C9B2BDA9AC100F278F6 /* StartPresenter.swift in Sources */,
 				8ADF9F142BD109A400B72ECC /* SettingsButton.swift in Sources */,
+				8A7768E72BD9052200367DE1 /* SecondScreenParametersView.swift in Sources */,
+				8AE23C732BD92A8900F278F6 /* CreateCheckingPresenter.swift in Sources */,
+				8A7768DD2BD8B3DC00367DE1 /* CreateScreenMonitoringAssembly.swift in Sources */,
 				8ADF9EE82BCFD89C00B72ECC /* BaseController.swift in Sources */,
+				8AE23C8C2BDA837800F278F6 /* AnalyticsExtraScreenViewController.swift in Sources */,
 				8ADF9F122BD05D9B00B72ECC /* EnumForStrings.swift in Sources */,
+				8AE23C892BDA82F000F278F6 /* AnalyticsCell.swift in Sources */,
 				8ADF9F212BD1618E00B72ECC /* MaintenanceDataAircraft.swift in Sources */,
+				8AE23C712BD92A7C00F278F6 /* CreateCheckingViewController.swift in Sources */,
 				8ADF9F342BD3880500B72ECC /* FirstScreenAircraftMaintenanceAssembly.swift in Sources */,
 				8ADF9F2D2BD2890200B72ECC /* MaintenanceCell.swift in Sources */,
+				8A7768DB2BD8B3D300367DE1 /* CreateScreenMonitoringPresenter.swift in Sources */,
 				8ADF9EE22BCFD1B700B72ECC /* MaintenancePresenter.swift in Sources */,
 				8ADF9EE42BCFD1CE00B72ECC /* MaintenanceAssembly.swift in Sources */,
+				8A7768D12BD8B36000367DE1 /* MonitoringCell.swift in Sources */,
+				8AE23C822BD9354600F278F6 /* ThirdScreenFlightAssembly.swift in Sources */,
+				8AE23C9D2BDA9ACC00F278F6 /* StartAssembly.swift in Sources */,
+				8AE23C8E2BDA838500F278F6 /* AnalyticsExtraScreenPresenter.swift in Sources */,
+				8AE23C902BDA839300F278F6 /* AnalyticsExtraScreenAssembly.swift in Sources */,
 				8ADF9EEA2BD01A0600B72ECC /* BaseTabBarItem.swift in Sources */,
 				8ADF9EF22BD0226200B72ECC /* MonitoringAssembly.swift in Sources */,
 				8ADF9F382BD3C9EB00B72ECC /* FirstScreenInspectionView.swift in Sources */,
 				8ADF9F1B2BD12ED300B72ECC /* ExtraSettingsMaintenancePresenter.swift in Sources */,
 				8ADF9EBB2BCFC8B600B72ECC /* AppDelegate.swift in Sources */,
 				8ADF9EBD2BCFC8B600B72ECC /* SceneDelegate.swift in Sources */,
+				8AE23C7C2BD9342500F278F6 /* FlightCell.swift in Sources */,
+				8AE23C802BD9352300F278F6 /* ThirdScreenFlightPresenter.swift in Sources */,
 				8ADF9EEE2BD0215000B72ECC /* MonitoringViewController.swift in Sources */,
 				8ADF9F322BD387FB00B72ECC /* FirstScreenAircraftMaintenancePresenter.swift in Sources */,
+				8AE23C942BDA908D00F278F6 /* AnalyticsScreenParameters.swift in Sources */,
 				8ADF9F192BD12D4D00B72ECC /* ExtraSettingsMaintenanceViewController.swift in Sources */,
+				8A7768D92BD8B3C900367DE1 /* CreateScreenMonitoringViewController.swift in Sources */,
 				8ADF9F282BD2649500B72ECC /* DateInspectionTextField.swift in Sources */,
 				8ADF9F1D2BD12F1500B72ECC /* ExtraSettingsMaintenanceAssembly.swift in Sources */,
+				8A7768E42BD8C50800367DE1 /* MonitoringParametersSavedData.swift in Sources */,
 				8ADF9F002BD022D300B72ECC /* SettingsViewController.swift in Sources */,
 				8ADF9F302BD387E000B72ECC /* FirstScreenAircraftMaintenanceViewController.swift in Sources */,
+				8AE23C752BD92A9900F278F6 /* CreateCheckingAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

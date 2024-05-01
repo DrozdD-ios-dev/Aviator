@@ -1,5 +1,5 @@
 //
-//  AircraftDataModel.swift
+//  AircraftSavedData.swift
 //  Aviator
 //
 //  Created by Дрозд Денис on 19.04.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class AircraftDataModel: Object {
+class AircraftSavedData: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var model: String = ""
     @objc dynamic var serialNumber: String = ""

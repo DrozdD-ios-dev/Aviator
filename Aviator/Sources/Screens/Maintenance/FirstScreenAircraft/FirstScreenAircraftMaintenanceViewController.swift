@@ -11,7 +11,7 @@ import UIKit
 
 protocol FirstScreenAircraftMaintenanceOutput: AnyObject {
     func dismissViewController()
-    func sendInspectionData(data: AircraftDataModel)
+    func sendInspectionData(data: AircraftSavedData)
 }
 
 final class FirstScreenAircraftMaintenanceViewController: BaseController {
@@ -37,6 +37,15 @@ final class FirstScreenAircraftMaintenanceViewController: BaseController {
         image.image = UIImage(named: "trash")
         image.isUserInteractionEnabled = true
         let gest = UITapGestureRecognizer(target: self, action: #selector(trashImageButtonTapped))
+        image.addGestureRecognizer(gest)
+        return image
+    }()
+    
+    private lazy var pencilImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "pencil")
+        image.isUserInteractionEnabled = true
+        let gest = UITapGestureRecognizer(target: self, action: #selector(pencilImageButtonTapped))
         image.addGestureRecognizer(gest)
         return image
     }()
@@ -84,6 +93,10 @@ private extension FirstScreenAircraftMaintenanceViewController {
         present(alertController, animated: true)
     }
     
+    @objc func pencilImageButtonTapped() {
+        print("Edit Activate")
+    }
+    
     func deleteOneItem() {
         presenter.deleteOneItem()
     }
@@ -96,7 +109,7 @@ extension FirstScreenAircraftMaintenanceViewController: FirstScreenAircraftMaint
         dismiss(animated: true, completion: nil)
     }
 
-    func sendInspectionData(data: AircraftDataModel) {
+    func sendInspectionData(data: AircraftSavedData) {
         firstScreenInspectionView.configure(data: data)
     }
 }
@@ -109,6 +122,7 @@ private extension FirstScreenAircraftMaintenanceViewController {
         view.addSubview(mainLabel)
         view.addSubview(aircraftScreenOneImage)
         view.addSubview(trashImage)
+        view.addSubview(pencilImage)
         view.addSubview(redLineView)
         view.addSubview(firstScreenInspectionView)
     }
@@ -127,6 +141,11 @@ private extension FirstScreenAircraftMaintenanceViewController {
         trashImage.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(25)
             make.trailing.equalToSuperview().inset(20)
+        }
+        
+        pencilImage.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(28)
+            make.trailing.equalTo(trashImage.snp.leading).offset(-10)
         }
         
         redLineView.snp.makeConstraints { make in

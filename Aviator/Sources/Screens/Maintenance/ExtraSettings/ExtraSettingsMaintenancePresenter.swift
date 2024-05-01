@@ -26,7 +26,7 @@ final class ExtraSettingsMaintenancePresenter: ExtraSettingsMaintenanceInput {
     weak var viewController: ExtraSettingsMaintenanceOutput?
     
     private let realm = try! Realm()
-    private var itemsAircraftModel: Results<AircraftDataModel>!
+    private var itemsAircraftModel: Results<AircraftSavedData>!
     
     private var dataAircraft = MaintenanceDataAircraft(
         name: "",
@@ -38,7 +38,7 @@ final class ExtraSettingsMaintenancePresenter: ExtraSettingsMaintenanceInput {
     // MARK: - Private func
     
     private func saveDataToRealm() {
-        let data = AircraftDataModel()
+        let data = AircraftSavedData()
         data.name = dataAircraft.name
         data.model = dataAircraft.model
         data.serialNumber = dataAircraft.serialNumber
@@ -59,7 +59,6 @@ final class ExtraSettingsMaintenancePresenter: ExtraSettingsMaintenanceInput {
             saveDataToRealm()
         } else {
             viewController?.showAlert()
-            NotificationCenter.default.post(name: Notification.Name("Update"), object: nil)
         }
     }
     

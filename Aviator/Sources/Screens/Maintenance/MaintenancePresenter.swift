@@ -11,7 +11,7 @@ import RealmSwift
 // MARK: - Protocol
 
 protocol MaintenanceInput {
-    var maintenanceDataBase: [AircraftDataModel] { get }
+    var maintenanceDataBase: [AircraftSavedData] { get }
     func setupBackgroundImage()
     func updateData()
 }
@@ -23,13 +23,13 @@ final class MaintenancePresenter: MaintenanceInput {
     weak var viewController: MaintenanceOutput?
     
     private let realm = try! Realm()
-    private var itemsAircraftModel: Results<AircraftDataModel>!
-    var maintenanceDataBase: [AircraftDataModel] = []
+    private var itemsAircraftModel: Results<AircraftSavedData>!
+    var maintenanceDataBase: [AircraftSavedData] = []
     
     // MARK: - Public function
     
     func updateData() {
-        itemsAircraftModel = realm.objects(AircraftDataModel.self)
+        itemsAircraftModel = realm.objects(AircraftSavedData.self)
         maintenanceDataBase = Array(itemsAircraftModel)
     }
     
