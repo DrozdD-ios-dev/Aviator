@@ -93,6 +93,7 @@ extension SettingsViewController {
     
     func rateApp() {
         print("Rate app")
+        UserDefaults.standard.set(false, forKey: "FirstOpenApp")
     }
 }
 
