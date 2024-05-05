@@ -19,15 +19,13 @@ UIKit, SnapKit, RealmSwift.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 <div style="display: flex;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/1.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/2.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/3.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/4.png" width="300">
-</div>
-
-<div style="display: flex;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/5.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/6.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/7.png" width="300" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/8.png" width="300">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/1.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/2.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/3.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/4.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/5.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/6.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/7.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/8.png" width="200" style="margin-right: 10px;">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/9.png" width="200">
 </div>
