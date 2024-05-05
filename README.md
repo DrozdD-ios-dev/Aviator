@@ -26,6 +26,5 @@ UIKit, SnapKit, RealmSwift.
     <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/5.png" width="200" style="margin-right: 10px;">
     <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/6.png" width="200" style="margin-right: 10px;">
     <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/7.png" width="200" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/8.png" width="200" style="margin-right: 10px;">
-    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/9.png" width="200">
+    <img src="https://github.com/DrozdD-ios-dev/Aviator/blob/main/Aviator/Resources/AssetsForREADME/8.png" width="200">
 </div>
